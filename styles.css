@@ -1,0 +1,315 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #1e3a8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* Current Page Highlight */
+  .nav-link[href*="index.html"].active,
+  .nav-link[href*="about.html"].active,
+  .nav-link[href*="gallery.html"].active,
+  .nav-link[href*="events.html"].active,
+  .nav-link[href*="contact.html"].active,
+  .nav-link[href*="terms.html"].active {
+    background-color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  /* Main Content */
+  .content {
+    flex: 1;
+    margin-top: 80px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-family: 'Hammersmith One', sans-serif;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bold-accent {
+    color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  .hero-logo,
+  .hero-asset {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem;
+  }
+  
+  .page-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1 1 300px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #3b82f6;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #cbd5e1;
+  }
+  
+  .contact-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: white;
+    color: #1e3a8a;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    flex: 1 1 200px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  
+  .footer p {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    color: #cbd5e1;
+  }
+/* About Page Styles */
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.motto {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+/* Gallery Page Styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Events Page Styles */
+.countdown-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.countdown-timer div {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.countdown-timer span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.events-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.event-category {
+  margin-bottom: 2rem;
+}
+
+.event-card {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+.event-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* Terms Page Styles */
+.terms-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.terms-section h2 {
+  margin-top: 1.5rem;
+  color: #1e3a8a;
+}
+
+.terms-section p {
+  margin-left: 1rem;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.page-header h1 {
+  color: white;
+}
+
+.page-header .bold-accent {
+  color: #f0f8ff;
+}
